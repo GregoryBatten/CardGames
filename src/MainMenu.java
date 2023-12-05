@@ -9,14 +9,16 @@ import javax.swing.*;
 
 public class MainMenu extends JPanel {
 	// Local variables for menu objects
-	private JEditorPane usernameText = new JEditorPane();
-	private JButton blackjackButton = new JButton("Blackjack");
-	private JButton pokerButton = new JButton("");
-	private JButton solitareButton = new JButton("");
-	private JButton mtgButton = new JButton("");
+	private static GameController gameController;
+	private static JEditorPane usernameText = new JEditorPane();
+	private static JButton blackjackButton = new JButton("Blackjack");
+	private static JButton pokerButton = new JButton("Texas Hold 'Em");
+	private static JButton solitareButton = new JButton("");
+	private static JButton mtgButton = new JButton("");
 	
 	// Menu Panel Constructor
 	public MainMenu() {
+		System.out.println("Creating main menu...");
 		// Defines the method to load the blackjack game panel
 		blackjackButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -29,6 +31,20 @@ public class MainMenu extends JPanel {
                 		UI.stopLoading();
             		}
         		});
+			}
+		});
+
+		pokerButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e ) {
+				UI.startLoading();
+
+				SwingUtilities.invokeLater(new Runnable() {
+					public void run() {
+						gameController = new GameController(new PokerGame(), new PokerUI());
+						UI.currentPanel = gameController.getView();
+						UI.stopLoading();
+					}
+				});
 			}
 		});
 		

@@ -42,6 +42,17 @@ public class Deck<T extends Card> extends LinkedList<T>{
 		return null;
 	}
 
+	void show(int index1, int index2) {
+		if(!isEmpty()) {
+			if(index1 < 0) index1 = 0;
+			if(index2 > size()) index2 = size();
+			if(index1 > index2) index2 = index1;
+			for(int i = index1; i < index2; i++) {
+				get(i).show();
+			}
+		}
+	}
+
 	// Reveals all cards
 	void showAll() {
 		for(Card card : this)
@@ -170,6 +181,7 @@ public class Deck<T extends Card> extends LinkedList<T>{
 		this.cardSpacing = cardSpacing;
 		
 		posX -= this.width / 2;
+		posY -= cardHeight * scaleFactor / 2;
 		for(Card card : this) {
 			card.setBounds(posX, posY, cardWidth, cardHeight, scaleFactor);
 			posX += card.getWidth() + cardSpacing;
@@ -201,6 +213,17 @@ public class Deck<T extends Card> extends LinkedList<T>{
 	double getScaleFactor() {
 		return scaleFactor;
 	}
+
+	int getWidth() {
+		return width;
+	}
+
+	void swapCards(int index1, int index2) {
+		if(index1 <= size() && index2 < size() && index1 >= 0 && index2 >= 0);
+		T temp = get(index1);
+		set(index1, get(index2));
+		set(index2, temp);
+	}
 	
 	// Print Methods
 	void print() {
@@ -208,7 +231,5 @@ public class Deck<T extends Card> extends LinkedList<T>{
 			System.out.print(card.name() + " ");
 		System.out.print("\n");
 	}
-
-	
 }
 

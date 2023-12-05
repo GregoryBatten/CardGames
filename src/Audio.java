@@ -19,7 +19,6 @@ public class Audio {
     // Local variables for audio clips
     private static Clip musicClip;
     private static Clip ambienceClip;
-    private static Clip sfxClip;
 	private static boolean muteMusic = false;
 
     // Defines the method for sending the output signal of one song
@@ -96,21 +95,13 @@ public class Audio {
     public static void playSFX(String audioFile) {
         new Thread(() -> {
             try (AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(new File(audioFile).getAbsoluteFile())) {
-                sfxClip = AudioSystem.getClip();
+                Clip sfxClip = AudioSystem.getClip();
                 sfxClip.open(audioInputStream);
                 sfxClip.start();
             } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
                 e.printStackTrace();
             }
         }).start();
-    }
-
-    // Defines the method to stop all threaded sound effects (UNTESTED)
-    public static void stopSFX() {
-        if (sfxClip != null && sfxClip.isRunning()) {
-            sfxClip.stop();
-            sfxClip.close();
-        }
     }
 
     // Defines the method to start the main menu song

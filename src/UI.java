@@ -13,7 +13,7 @@ import javax.swing.*;
  */
 
 public class UI {
-	// Customizable class constants (WARNING - only 16:9 aspect ratio has been tested)
+	// Customizable class constants (only 16:9 aspect ratio has been tested)
 	private static final String ICONS_PATH = "images/Icons/";
 	private static final String MENU_WALLPAPER_PATH = "images/menu_wallpaper.jpg";
 	private static final String LOADING_WALLPAPER_PATH = "images/loading_wallpaper.jpg";
@@ -34,6 +34,8 @@ public class UI {
 	private static Image loadingWallpaper; // Loaded in memory for loading screens
 
     // Public variables for UI dimensions
+    public static int centerX;
+    public static int centerY;
 	public static int buttonWidth;
 	public static int buttonHeight;
 	public static int cardWidth;
@@ -68,6 +70,8 @@ public class UI {
                 currentPanel.setSize(containerPane.getSize());
 
 				// Define public variables for UI dimensions
+                centerX = newWidth / 2;
+                centerY = newHeight / 2;
 				buttonWidth = newWidth / 10;
 				buttonHeight = buttonWidth / 2;
 				cardWidth = newWidth / 10;
@@ -103,13 +107,14 @@ public class UI {
 
     // Bring up the loading screen and stop all current processes
     public static void startLoading() {
+        System.out.println("Loading...");
         loading = true;
         frame.revalidate();
         frame.repaint();
-        Audio.stopSFX();
         Audio.stopMusic();
         Audio.stopAmbience();
         containerPane.remove(currentPanel);
+        currentPanel = null;
     }
 
     // Add the current panel back to the container and remove the loading screen
@@ -134,6 +139,7 @@ public class UI {
         private JEditorPane loadingText = new JEditorPane();
         private JEditorPane userChipsText = new JEditorPane();
 
+
         private UIPanel() {
             setOpaque(false);
 
@@ -146,6 +152,7 @@ public class UI {
                         // This is not a new runnable because the contents of MainMenu are already in memory,
                         // causing a brief and unnecessary flicker of the loading screen if implemented
                         startLoading();
+                        GameController.destroy();
                         currentPanel = new MainMenu();
                         userPlayer = new Player(userPlayer.name(), userPlayer.isHuman(), userPlayer.getChips()); // Assign the overhead user to the parent class
                         stopLoading();
@@ -216,6 +223,9 @@ public class UI {
             // Loading screen UI setup
             loadingText.setBounds(getWidth() / 2 - buttonWidth, getHeight() / 2 - buttonHeight, buttonWidth * 2, buttonHeight * 2);
             formatEditorPane(loadingText, "<center><br>Finding a seat...</center>", fontSize, false, loading);
+
+            containerPane.repaint();
+            containerPane.revalidate();
         }
     }
 

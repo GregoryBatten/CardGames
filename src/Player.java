@@ -12,6 +12,7 @@ public class Player {
 	protected int bet;
 	protected boolean paid;
 	protected boolean turn;
+    protected static final Object lock = new Object();
 	
 	// Creates an empty player
 	Player() {}
@@ -82,6 +83,16 @@ public class Player {
 	void setBet(int amount) {
 		bet = amount;
 	}
+
+	void addBet(int amount) {
+		bet += amount;
+		chips -= amount;
+	}
+
+	int payBet(int amount) {
+		setBet(removeChips(amount));
+		return getBet();
+	}
 	
 	void setPaid(boolean paid) {
 		if(paid) bet = 0;
@@ -100,4 +111,7 @@ public class Player {
 		return this.turn;
 	}
 	
+	static Object getLock() {
+		return lock;
+	}
 }

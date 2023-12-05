@@ -84,4 +84,14 @@ public class PlayingCardDeck extends Deck<PlayingCard>{
 			if((i.suit() == suit)) count++;
 		return count;
 	}
+
+	void sortDesc() {
+		for (int i = 0; i < size() - 1; i++) {
+			for (int j = i + 1; j < size(); j++) {
+				if (get(i).rank() < get(j).rank()) {
+					swapCards(i, j);
+				}
+			}
+		}
+	}
 }

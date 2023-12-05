@@ -28,7 +28,7 @@ public class BlackjackGame extends JPanel{
 	// Local variables for betting mechanics
 	private static int newBet = 100;
 	private static int newInsuranceBet;
-	private static String betString; // Added for editable text pane
+	private static String betString; // Added for editable text pane (WIP)
 	private static boolean offerInsurance;
 
 	// Local variables for user turn actions
@@ -477,20 +477,20 @@ public class BlackjackGame extends JPanel{
 		// Set the location of each possible hand
 		// posX = center of hand, posY = top of hand
 		if(!userPlayer.isSplit()) { // User has only 1 hand
-			userPlayer.splitHands()[0].setBounds(getWidth() / 2, getHeight() - UI.cardHeight - UI.spacerWidth, UI.cardWidth, UI.cardHeight, 1.0, UI.spacerWidth);
+			userPlayer.splitHands()[0].setBounds(getWidth() / 2, getHeight() - UI.cardHeight / 2 - UI.spacerWidth, UI.cardWidth, UI.cardHeight, 1.0, UI.spacerWidth);
 		}
 		else { // User has up to 4 split hands
 			if(userPlayer.splitHands()[0] != null) 
-				userPlayer.splitHands()[0].setBounds(getWidth() / 3 - UI.cardWidth / 4, getHeight() - UI.cardHeight - UI.spacerWidth, UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
+				userPlayer.splitHands()[0].setBounds(getWidth() / 3 - UI.cardWidth / 4, getHeight() - UI.cardHeight / 2 - UI.spacerWidth, UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
 			if(userPlayer.splitHands()[1] != null) 
-				userPlayer.splitHands()[1].setBounds(getWidth() * 2 / 3 + UI.cardWidth / 4, getHeight() - UI.cardHeight - UI.spacerWidth, UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
+				userPlayer.splitHands()[1].setBounds(getWidth() * 2 / 3 + UI.cardWidth / 4, getHeight() - UI.cardHeight / 2 - UI.spacerWidth, UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
 			if(userPlayer.splitHands()[2] != null) 
-				userPlayer.splitHands()[2].setBounds(getWidth() / 3 - UI.cardWidth, getHeight() - UI.cardHeight * 2 - UI.spacerWidth * 2 , UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
+				userPlayer.splitHands()[2].setBounds(getWidth() / 3 - UI.cardWidth, getHeight() - UI.cardHeight * 3 / 2 - UI.spacerWidth * 2 , UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
 			if(userPlayer.splitHands()[3] != null) 
-				userPlayer.splitHands()[3].setBounds(getWidth() * 2 / 3 + UI.cardWidth, getHeight() - UI.cardHeight * 2 - UI.spacerWidth * 2, UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
+				userPlayer.splitHands()[3].setBounds(getWidth() * 2 / 3 + UI.cardWidth, getHeight() - UI.cardHeight * 3 / 2 - UI.spacerWidth * 2, UI.cardWidth, UI.cardHeight, 0.8, UI.spacerWidth / 2);
 		}
 		
-		house.hand().setBounds( getWidth() / 2, UI.spacerWidth, UI.cardWidth, UI.cardHeight, 1.0, UI.spacerWidth);
+		house.hand().setBounds( getWidth() / 2, UI.spacerWidth + UI.cardHeight / 2, UI.cardWidth, UI.cardHeight, 1.0, UI.spacerWidth);
 		
 		// Draw card images for each possible hand
 		for(PlayingCardDeck deck : userPlayer.splitHands()){
@@ -503,16 +503,16 @@ public class BlackjackGame extends JPanel{
 		}
 		
 		// User turn actions UI setup
-        hitButton.setBounds(userPlayer.currHand().getPosX() - UI.buttonWidth - UI.spacerWidth / 2, userPlayer.currHand().getPosY() - UI.buttonHeight - UI.spacerWidth * 2, UI.buttonWidth, UI.buttonHeight);
+        hitButton.setBounds(userPlayer.currHand().getPosX() - UI.buttonWidth - UI.spacerWidth / 2, userPlayer.currHand().getPosY() - UI.cardHeight / 2 - UI.buttonHeight - UI.spacerWidth * 2, UI.buttonWidth, UI.buttonHeight);
         UI.formatButton(hitButton, null, 10, 80, 10, 180, UI.fontSize * 2, userPlayer.isTurn());
         
-        standButton.setBounds(userPlayer.currHand().getPosX() + UI.spacerWidth / 2, userPlayer.currHand().getPosY() - UI.buttonHeight - UI.spacerWidth * 2, UI.buttonWidth, UI.buttonHeight);
+        standButton.setBounds(userPlayer.currHand().getPosX() + UI.spacerWidth / 2, userPlayer.currHand().getPosY() - UI.cardHeight / 2 - UI.buttonHeight - UI.spacerWidth * 2, UI.buttonWidth, UI.buttonHeight);
         UI.formatButton(standButton, null, 80, 10, 10, 180, UI.fontSize * 2, userPlayer.isTurn());
         
         doubleDownButton.setBounds(getWidth() - UI.buttonWidth, getHeight() - UI.buttonHeight, UI.buttonWidth, UI.buttonHeight);
         UI.formatButton(doubleDownButton, null, 0, 0, 0, 150, UI.fontSize * 2, userPlayer.isTurn() && userPlayer.currHand().size() == 2);
         
-        splitButton.setBounds(userPlayer.currHand().getPosX() - UI.buttonWidth / 2, userPlayer.currHand().getPosY() - UI.buttonHeight * 2 - UI.spacerWidth * 3, UI.buttonWidth, UI.buttonHeight);
+        splitButton.setBounds(userPlayer.currHand().getPosX() - UI.buttonWidth / 2, userPlayer.currHand().getPosY() - UI.cardHeight / 2 - UI.buttonHeight * 2 - UI.spacerWidth * 3, UI.buttonWidth, UI.buttonHeight);
         UI.formatButton(splitButton, null, 0, 0, 0, 150, UI.fontSize * 2, userPlayer.isTurn() && userPlayer.canSplit(userPlayer.currHandIndex()));
         
         // Insurance actions UI setup
