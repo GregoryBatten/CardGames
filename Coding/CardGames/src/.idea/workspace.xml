@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="eaf9e530-175a-4b05-b05c-9e0d84316933" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../README.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../audio/card_draw.wav" beforeDir="false" afterPath="$PROJECT_DIR$/../audio/card_draw.wav" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$10.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$11.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$12.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$13.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$14.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$4.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$6$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$6.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$7.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$8.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame$9.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackGame.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/BlackjackPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/BlackjackPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/Card.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/Card.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/Deck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/Deck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/GameController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/GameController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/MainMenu$1$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/MainMenu$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/MainMenu$2$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/MainMenu$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/MainMenu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/Player.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/Player.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PlayingCard.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PlayingCard.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PlayingCardDeck.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PlayingCardDeck.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PlayingCardGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PlayingCardGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerGame.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerGame.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerPlayer.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerPlayer.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerUI$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerUI$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerUI$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerUI$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerUI$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerUI$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerUI$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerUI$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerUI$5.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerUI$5.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/PokerUI.class" beforeDir="false" afterPath="$PROJECT_DIR$/../bin/PokerUI.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/UI$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/UI$UIPanel$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/UI$UIPanel$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/UI$UIPanel$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/UI$UIPanel.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../bin/UI.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/Icons/PokerIcons/Chip.png" beforeDir="false" afterPath="$PROJECT_DIR$/../images/Icons/PokerIcons/Chip.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../images/PNG-cards-1.3/card_back.png" beforeDir="false" afterPath="$PROJECT_DIR$/../images/PNG-cards-1.3/card_back.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackjackGame.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BlackjackPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/BlackjackPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/Card.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Deck.java" beforeDir="false" afterPath="$PROJECT_DIR$/Deck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/GameController.java" beforeDir="false" afterPath="$PROJECT_DIR$/GameController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MainMenu.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayingCard.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlayingCard.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayingCardDeck.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlayingCardDeck.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PlayingCardGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PlayingCardGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/PokerGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerPlayer.java" beforeDir="false" afterPath="$PROJECT_DIR$/PokerPlayer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/PokerUI.java" beforeDir="false" afterPath="$PROJECT_DIR$/PokerUI.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/UI.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2Zn5cLtbaXAey9zZMzkKPVGhqZT" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/greg/Documents/Coding/CardGames/src/PythonServer.py",
+    "settings.editor.selected.configurable": "advanced.settings"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="eaf9e530-175a-4b05-b05c-9e0d84316933" name="Changes" comment="" />
+      <created>1703045081071</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1703045081071</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
